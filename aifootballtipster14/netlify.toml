@@ -1,0 +1,19 @@
+# Netlify Build Settings
+# This section defines how Netlify will build and deploy your site.
+[build]
+  # The command to run to build your site. For Vite, this is typically "npm run build".
+  command = "npm run build"
+  
+  # The directory that contains your serverless functions.
+  functions = "netlify/functions"
+  
+  # The directory that Netlify will deploy. Vite builds to the "dist" directory by default.
+  publish = "dist"
+
+# Redirect rule for Local Development Proxying
+# This rule is essential for running the app locally with `netlify dev`.
+# It forwards any request made to "/api/*" to the corresponding Netlify Function.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

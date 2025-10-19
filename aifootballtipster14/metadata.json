@@ -1,0 +1,5 @@
+{
+  "name": "AIFootballTipster",
+  "description": "An AI-powered football tipster that uses Gemini to analyze data and predict match outcomes, providing expert tips and analysis.",
+  "requestFramePermissions": []
+}
